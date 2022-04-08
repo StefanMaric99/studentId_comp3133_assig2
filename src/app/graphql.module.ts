@@ -3,7 +3,7 @@ import { APOLLO_OPTIONS } from 'apollo-angular';
 import { ApolloClientOptions, InMemoryCache } from '@apollo/client/core';
 import { HttpLink } from 'apollo-angular/http';
 
-import { env, uri } from './routes';
+import { env, uri } from './uri';
 
 export function createApollo(httpLink: HttpLink): ApolloClientOptions<any> {
   return {

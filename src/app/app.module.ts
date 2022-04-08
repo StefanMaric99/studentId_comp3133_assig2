@@ -15,7 +15,7 @@ import { SignupComponent } from './signup/signup.component';
 import { GraphQLModule } from './graphql.module';
 import { HttpClientModule } from '@angular/common/http';
 
-import { env, uri } from './routes';
+import { env, uri } from './uri';
 
 @NgModule({
   declarations: [
