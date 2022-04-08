@@ -9,21 +9,23 @@ import { APOLLO_OPTIONS } from 'apollo-angular';
 import { HttpLink } from 'apollo-angular/http';
 import { InMemoryCache } from '@apollo/client/core';
 import { NavbarComponent } from './navbar/navbar.component';
+import { LoginComponent } from './login/login.component';
+import { SignupComponent } from './signup/signup.component';
 
-const heroku = 'https://airbnb-graphql-yoga.herokuapp.com/';
-const local = 'http://localhost:4000';
-const isLocal = false;
+import { GraphQLModule } from './graphql.module';
+import { HttpClientModule } from '@angular/common/http';
+
+import { env, uri } from './routes';
 
 @NgModule({
   declarations: [
     AppComponent,
     UserComponent,
-    NavbarComponent
+    NavbarComponent,
+    LoginComponent,
+    SignupComponent,
   ],
-  imports: [
-    BrowserModule,
-    AppRoutingModule
-  ],
+  imports: [BrowserModule, AppRoutingModule, GraphQLModule, HttpClientModule],
   providers: [
     {
       provide: APOLLO_OPTIONS,
@@ -31,15 +33,15 @@ const isLocal = false;
         return {
           cache: new InMemoryCache(),
           link: httpLink.create({
-            uri: heroku,
+            uri: env === 'prod' ? uri['prod'] : uri['dev'],
             withCredentials: true,
-          })
+          }),
         };
       },
       deps: [HttpLink],
     },
     // CanActivateRouteService
   ],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
 })
-export class AppModule { }
+export class AppModule {}
