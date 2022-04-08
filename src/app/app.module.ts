@@ -8,13 +8,17 @@ import { UserComponent } from './user/user.component';
 import { APOLLO_OPTIONS } from 'apollo-angular';
 import { HttpLink } from 'apollo-angular/http';
 import { InMemoryCache } from '@apollo/client/core';
+import { NavbarComponent } from './navbar/navbar.component';
 
 const heroku = 'https://airbnb-graphql-yoga.herokuapp.com/';
+const local = 'http://localhost:4000';
+const isLocal = false;
 
 @NgModule({
   declarations: [
     AppComponent,
-    UserComponent
+    UserComponent,
+    NavbarComponent
   ],
   imports: [
     BrowserModule,
@@ -27,7 +31,6 @@ const heroku = 'https://airbnb-graphql-yoga.herokuapp.com/';
         return {
           cache: new InMemoryCache(),
           link: httpLink.create({
-            // uri: 'http://localhost:4001/graphql',
             uri: heroku,
             withCredentials: true,
           })
