@@ -3,7 +3,6 @@ import {FormBuilder, FormGroup, Validators} from '@angular/forms';
 import {Router} from '@angular/router';
 import {Apollo, gql} from 'apollo-angular';
 import {FetchResult} from '@apollo/client';
-import {MatSnackBar} from '@angular/material/snack-bar';
 
 const SIGNUP = gql`
   mutation createUser($userInput: UserInput!) {
