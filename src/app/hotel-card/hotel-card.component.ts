@@ -6,7 +6,6 @@ import {Hotel} from '../type.d.ts';
 @Component({
   selector: 'app-hotel-card',
   templateUrl: './hotel-card.component.html',
-  styleUrls: ['./hotel-card.component.scss']
 })
 export class HotelCardComponent implements OnInit {
 

@@ -6,7 +6,6 @@ import {FormBuilder, FormGroup, Validators} from '@angular/forms';
 @Component({
   selector: 'app-hotel-serach',
   templateUrl: './hotel-serach.component.html',
-  styleUrls: ['./hotel-serach.component.scss']
 })
 export class HotelSerachComponent implements OnInit {
   searchBox: FormGroup;
