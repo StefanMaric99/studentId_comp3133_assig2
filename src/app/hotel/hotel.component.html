@@ -1,4 +1,6 @@
 <div class="container">
+  <h1 class="mt-5">Hotels</h1>
+
   <div *ngIf="!loading">
     <div *ngFor="let hotel of hotels">
       <app-hotel-card [hotel]="hotel"></app-hotel-card>

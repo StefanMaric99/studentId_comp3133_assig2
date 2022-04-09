@@ -11,11 +11,10 @@ export class UserComponent implements OnInit {
   loading = true;
   error: any;
 
-  // gridColumns = 3;
-
   constructor(private apollo: Apollo) { }
   log(val) { console.log({val}); }
   ngOnInit(): void {
+    console.log("mounted")
     this.apollo
     .watchQuery({
       query: gql`
@@ -38,8 +37,4 @@ export class UserComponent implements OnInit {
       this.error = result.error;
     });
   }
-
-  toggleGridColumns(): void {
-  }
-
 }
