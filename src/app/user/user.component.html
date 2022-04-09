@@ -1,12 +1,14 @@
 <div class="container">
   <h1 class="mt-5">Users</h1>
 
-  <div class="card mb-3" *ngFor="let user of users">
-    <div class="card-header">{{ user.firstName }} {{ user.lastName }}</div>
-    <div class="card-body">
-      <h5 class="card-title">ID: {{ user.id }}</h5>
-      <p class="card-text">Username: {{ user.username }}</p>
-      <a href="#" class="btn btn-primary">Email: {{ user.email }}</a>
+    <div class="card mb-3" *ngFor="let user of users">
+      <div class="card-header">
+        {{user.firstName}} {{user.lastName}}
+      </div>
+      <div class="card-body">
+        <h5 class="card-title">ID: {{user.id}}</h5>
+        <p class="card-text">Username: {{user.username}}</p>
+        <a href="#" class="btn btn-primary">Email: {{user.email}}</a>
+      </div>
     </div>
-  </div>
 </div>

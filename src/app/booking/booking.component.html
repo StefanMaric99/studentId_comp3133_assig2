@@ -1,0 +1,7 @@
+<div class="container">
+  <div *ngIf="!loading">
+    <div *ngFor="let booking of bookings">
+      <app-booking-card [booking]="booking"></app-booking-card>
+    </div>
+  </div>
+</div>
