@@ -6,14 +6,12 @@ import {UserComponent} from './user/user.component';
 import {HotelSerachComponent} from './hotel-serach/hotel-serach.component';
 import {SignupComponent} from './signup/signup.component';
 import {BookingComponent} from './booking/booking.component';
-// import {CanActivateRouteService} from './CanActivateRoute.service';
 
 const routes: Routes = [
   {
     path: 'user',
     component: UserComponent,
     pathMatch: 'full',
-    // canActivate: [CanActivateRouteService]
   },
   {
     path: '',
@@ -24,13 +22,11 @@ const routes: Routes = [
     path: 'hotel',
     component: HotelComponent,
     pathMatch: 'full',
-    // canActivate: [CanActivateRouteService]
   },
   {
     path: 'search-hotel',
     component: HotelSerachComponent,
     pathMatch: 'full',
-    // canActivate: [CanActivateRouteService]
   },
   {
     path: 'signup',
@@ -41,7 +37,6 @@ const routes: Routes = [
     path: 'booking',
     component: BookingComponent,
     pathMatch: 'full',
-    // canActivate: [CanActivateRouteService]
   }
 ];
 
